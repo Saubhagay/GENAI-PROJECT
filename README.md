@@ -72,40 +72,6 @@ User can also generate a tailored PDF resume
 (Gemini generates HTML → Puppeteer converts to PDF)
 ```
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js >= 18
-- MongoDB URI
-- Google Gemini API Key
-
-### Backend Setup
-```bash
-cd Backend
-npm install
-```
-
-Create a `.env` file in `Backend/`:
-```
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-GOOGLE_GENAI_API_KEY=your_gemini_api_key
-```
-
-```bash
-npm run dev
-# Server runs on http://localhost:3000
-```
-
-### Frontend Setup
-```bash
-cd Frontend
-npm install
-npm run dev
-# App runs on http://localhost:5173
-```
 
 ---
 
@@ -135,28 +101,3 @@ GENAI-PROJECT/
             └── interview/
 ```
 
----
-
-## 📬 API Endpoints
-
-| Method | Route | Description |
-|--------|-------|-------------|
-| POST | `/api/auth/register` | Register a new user |
-| POST | `/api/auth/login` | Login and get JWT cookie |
-| POST | `/api/auth/logout` | Logout and clear cookie |
-| POST | `/api/interview/report` | Generate AI interview report |
-| GET | `/api/interview/report/:id` | Get report by ID |
-| GET | `/api/interview/reports` | Get all reports for user |
-| GET | `/api/interview/resume/:id` | Download AI-generated resume PDF |
-
----
-
-## 🔒 Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `MONGO_URI` | MongoDB connection string |
-| `JWT_SECRET` | Secret key for JWT signing |
-| `GOOGLE_GENAI_API_KEY` | Google Gemini API key |
-
-> ⚠️ Never commit your `.env` file. It is included in `.gitignore`.
